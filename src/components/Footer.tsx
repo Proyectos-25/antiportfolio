@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import GlitchText from './GlitchText';
 
@@ -25,6 +25,20 @@ const Footer = () => {
           <GlitchText text="Visita mi repositorio de código dudoso" />
         )}
       </a>
+      {mode === 'zen' && (
+        <>
+          <span className="mx-2 text-gray-800">|</span>
+          <a
+            href="https://smcurbelo.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-gray-800 hover:text-gray-600"
+          >
+            <ExternalLink className="w-5 h-5" />
+            <span>Visita mi portfolio normie/aburrido</span>
+          </a>
+        </>
+      )}
     </footer>
   );
 };
